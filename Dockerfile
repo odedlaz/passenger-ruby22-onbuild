@@ -28,7 +28,7 @@ RUN mkdir /home/app/webapp
 WORKDIR /home/app/webapp
 ONBUILD ADD Gemfile /home/app/webapp/
 ONBUILD ADD Gemfile.lock /home/app/webapp/
-ONBUILD RUN bundle install --with="production"
+ONBUILD RUN bundle install --without development test
 
 # === 6 ===
 # Add the rails app
